@@ -22,7 +22,7 @@ class Contacts:
     # add_contact function
     def add_contact(self, id=None, first_name=None, last_name=None):
         if id in self.data:
-            return "error"
+            return "Phone number already exists."
         
         self.data[id] = [first_name, last_name]
         
@@ -60,7 +60,7 @@ class Contacts:
     # delete_contact function
     def delete_contact(self, id=None):
         if id not in self.data:
-            return "error"
+            return "Invalid phone number."
         
         # save name that will be deleted
         name = self.data[id][0] + self.data[id][1]
@@ -74,13 +74,3 @@ class Contacts:
                 json.dump(self.data, file, indent=4)
 
         return name
-
-        
-
-
-
-        
-
-
-        
-
