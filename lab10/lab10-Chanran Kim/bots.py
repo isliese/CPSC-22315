@@ -1,7 +1,7 @@
 import json
 import threading
 import time
-import ast  # 추가: 안전한 문자열 변환을 위해 사용
+import ast  
 
 # Load inventory from the file
 def load_inventory(file_path):
